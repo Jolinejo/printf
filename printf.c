@@ -20,13 +20,13 @@ int _putchar(char c)
 int _printf(const char *format, ...)
 {
 	int n = 0;
-	int i = 1;
+	int i = 0;
 	int j;
 	char *s;
 	va_list args;
 
 	va_start(args, format);
-	while (format[i + 1])
+	while (format[i])
 	{
 		if (format[i] != '%')
 		{
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
-			_putchar("%");
+			_putchar('%');
 			n++;
 		}
 		else if (format[i + 1] == 'c')
@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 			{
 				_putchar(s[j]);
 				n++;
-				j++
+				j++;
 			}
 		}
 		i += 2;
