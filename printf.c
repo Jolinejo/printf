@@ -35,6 +35,8 @@ int _printf(const char *format, ...)
 			s = va_arg(args, char*);
 			n += print_strings(s);
 		}
+		else if (format[i + 1] == 'i' || format[i + 1] == 'd')
+			n += print_number(va_arg(args, int));
 		else
 		{
 			n += _putchar(format[i]);
