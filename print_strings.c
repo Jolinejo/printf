@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
-*print_strings-Entrypoint
-*Description:tocheckifletterisuppercase
+*print_strings - Entrypoint
+*Description : to checkifletterisuppercase
 *@s:param
 *Return:int
 */
+
 
 int print_strings(char *s)
 {
