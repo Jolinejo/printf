@@ -7,4 +7,5 @@
 #include <stdlib.h>
 int _printf(const char *format, ...);
 int _putchar(char c);
+int print_strings(char *s);
 #endif
