@@ -1,16 +1,5 @@
 #include "main.h"
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
  * _printf - Entry point
  * Description:  check if letter is uppercase
  * @format: string
@@ -18,8 +7,7 @@ int _putchar(char c)
  */
 int _printf(const char *format, ...)
 {
-	int n = 0;
-	int i = 0;
+	int n = 0, i = 0;
 	int j;
 	char *s;
 	va_list args;
@@ -57,5 +45,6 @@ int _printf(const char *format, ...)
 		}
 		i += 2;
 	}
+	va_end(args);
 	return (n);
 }
