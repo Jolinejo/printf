@@ -6,15 +6,16 @@
  * Description: to check if letter is uppercase
  * Return: 1 if upper 0 else
  */
-void print_number(int n)
+int print_number(int n)
 {
 	int len = 1;
+	int num = 0;
 	unsigned int z;
 	unsigned int final;
 
 	if (n < 0)
 	{
-		_putchar('-');
+		num += _putchar('-');
 		z = -n;
 	}
 	else
@@ -26,6 +27,7 @@ void print_number(int n)
 	}
 	for ( ; len; len /= 10)
 	{
-		_putchar(((final / len) % 10) + '0');
+		num += _putchar(((final / len) % 10) + '0');
 	}
+	return (num);
 }
